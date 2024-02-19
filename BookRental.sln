@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRentalClient", "BookRentalClient\BookRentalClient.csproj", "{23E76574-0025-4232-AAAC-CBDEB6ACB8B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRentalClient", "BookRentalClient\BookRentalClient.csproj", "{23E76574-0025-4232-AAAC-CBDEB6ACB8B3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRentalClientWithPage", "BookRentalClientWithPage\BookRentalClientWithPage.csproj", "{C9C35B94-9CDC-417B-B6D6-9ECBE43C9A1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FramePageSample", "FramePageSample\FramePageSample.csproj", "{1051FA61-C23E-4210-8C12-BC74E3FA2705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{23E76574-0025-4232-AAAC-CBDEB6ACB8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23E76574-0025-4232-AAAC-CBDEB6ACB8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23E76574-0025-4232-AAAC-CBDEB6ACB8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C35B94-9CDC-417B-B6D6-9ECBE43C9A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C35B94-9CDC-417B-B6D6-9ECBE43C9A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C35B94-9CDC-417B-B6D6-9ECBE43C9A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C35B94-9CDC-417B-B6D6-9ECBE43C9A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1051FA61-C23E-4210-8C12-BC74E3FA2705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1051FA61-C23E-4210-8C12-BC74E3FA2705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1051FA61-C23E-4210-8C12-BC74E3FA2705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1051FA61-C23E-4210-8C12-BC74E3FA2705}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

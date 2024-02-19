@@ -1,5 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,27 +17,21 @@ using System.Windows.Shapes;
 namespace BookRentalClient
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainPage : Page
     {
-        public MainWindow()
+        public MainPage()
         {
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            MainPage page = new MainPage();
-            MainFrame.Content = page;
-        }
-
-
-        /*
         private const string BookDBPath = "books.csv";
 
         private void NewBook_Click(object sender, RoutedEventArgs e)
         {
+            BookEditorPage page = new BookEditorPage();
+
             BookEditorWindow window = new BookEditorWindow();
             if (window.ShowDialog() == true)
             {
@@ -67,23 +65,6 @@ namespace BookRentalClient
             }
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (File.Exists(BookDBPath))
-            {
-                string[] lines = File.ReadAllLines(BookDBPath);
-                foreach (string line in lines)
-                {
-                    Book book = Book.FromCsv(line);
-                    LB_Books.Items.Add(book);
-                }
-            }
-            else
-            {
-                File.Create(BookDBPath);
-            }
-        }
-
         private void Save()
         {
             List<string> op = new List<string>();
@@ -113,6 +94,22 @@ namespace BookRentalClient
                 case Key.Delete: DeleteBook_Click(sender, e); break;
             }
         }
-        */
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (File.Exists(BookDBPath))
+            {
+                string[] lines = File.ReadAllLines(BookDBPath);
+                foreach (string line in lines)
+                {
+                    Book book = Book.FromCsv(line);
+                    LB_Books.Items.Add(book);
+                }
+            }
+            else
+            {
+                File.Create(BookDBPath);
+            }
+        }
     }
 }
